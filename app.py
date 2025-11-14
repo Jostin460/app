@@ -3,15 +3,14 @@ import pandas as pd
 from openai import OpenAI
 import os
 
-st.title("S&P 500 Data Analysis Assistant")
-st.write("Realice consultas sobre el dataset del S&P 500 usando análisis REAL del dataframe.")
+st.title("📈 S&P 500 Data Analysis Assistant")
 
 # Entrada usuario
 question = st.text_area("Pregunta:", placeholder="Ejemplo: ¿Cuál es el precio promedio actual?")
 api_key = st.text_input("Clave API:", type="password")
 
 # Cargar dataset
-uploaded_file = st.file_uploader("Suba el CSV del S&P 500", type="csv")
+uploaded_file = st.file_uploader("Suba el CSV", type="csv")
 
 if uploaded_file is None:
     st.info("Suba un archivo para continuar.")
