@@ -60,10 +60,6 @@ Reglas:
     if python_code == "NONE":
         st.warning("La pregunta está fuera del alcance del dataset.")
         st.stop()
-
-    st.write("🔧 **Código generado:**")
-    st.code(python_code, language="python")
-
     # ===== 2) Ejecutar el código generado =====
 
     try:
